@@ -8,7 +8,7 @@
 
 ## ③DEMO
 
-https://github.com/uchy1217/kadai05_map_20231125_uh
+https://github.com/uchy1217/uchy1217-kadai05_map_20231125_uh_upload
 
 ## ④工夫した点・こだわった点
 
