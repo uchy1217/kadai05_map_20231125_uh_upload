@@ -1,0 +1,251 @@
+* {
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #fae0f5;
+}
+
+h1 {
+  text-align: center;
+  margin: 50px 0;
+  font-size: 36px;
+  color: #be03a9;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  font-family: 'Arial', sans-serif;
+}
+
+
+h5 {
+  text-align: left;
+  font-size: 20px;
+  color: white;
+  margin-bottom: 7px;
+}
+
+h6 {
+  text-align: left;
+  font-size: 20px;
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 7px;
+}
+
+
+input {
+  width: 500px;
+  padding: 10px;
+  display: block;
+  margin: 0 auto 50px;
+}
+
+textarea {
+  width: 500px;
+  height: 80px;
+  padding: 10px;
+  margin: 0 auto 50px;
+  display: block;
+  resize: none;
+}
+
+button {
+  width: 200px;
+  height: 50px;
+  margin: 0 auto 50px;
+  display: block;
+  font-size: 16px;
+}
+
+#output {
+  width: 500px;
+  display: block;
+  height: 500px;
+  border: 1px solid #f6e0ef;
+  margin: 0 auto;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+/* チャットコンテナの基本スタイル */
+.chat-container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 800px;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  overflow: auto;
+}
+
+
+/* 全メッセージ共通のスタイル */
+.message {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  max-width: 70%;
+  word-wrap: break-word;
+}
+
+/* 左側のメッセージスタイル */
+.message.left {
+  background: #e0f7fa;
+  align-self: flex-start;
+  margin-right: auto;
+}
+
+/* 右側のメッセージスタイル */
+.message.right {
+  background: #4db6ac;
+  color: white;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+/* メッセージ内のユーザー名スタイル */
+.message-user {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* メッセージテキストスタイル */
+.message-text {
+  line-height: 1.5;
+}
+
+/* その他の要素スタイル */
+#output {
+  height: 500px; /* 適切な高さに調整してください */
+  overflow-y: auto;
+}
+
+input, textarea, button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+button {
+  width: 180px;
+  height: 40px;
+  margin: 20px auto;
+  display: block;
+  font-size: 16px;
+  background-color: #96017a;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #b80780;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  height: 90px; /* Adjust to match the title size */
+  width: 90px; /* Adjust to match the title size */
+}
+
+.title {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 50px;
+  color: #4f0041;
+  text-shadow: 2px 2px 4px rgba(80, 14, 54, 0.2);
+  font-family: 'Arial', sans-serif;
+}
+
+.line-bubble {
+  max-width: 70%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: white;
+}
+
+.user-message {
+  margin-left: auto;
+  background-color: #fdddf0; /* LINEの自分のメッセージの色 */
+}
+
+.other-message {
+  margin-right: auto;
+  background-color: #FFFFFF; /* LINEの他人のメッセージの色 */
+}
+
+
+.line-talk-text {
+  word-wrap: break-word;
+}
+
+/* チャットコンテナの背景色設定 */
+.chat-container {
+  background: linear-gradient(to right, #be03a9, #ffb6c1); /* より薄い紫色とピンクのグラデーション */
+  padding: 15px;
+}
+
+.selectbox-001 {
+  position: relative;
+}
+
+.selectbox-001::before,
+.selectbox-001::after {
+  position: absolute;
+  content: '';
+  pointer-events: none;
+}
+
+.selectbox-001::before {
+  display: inline-block;
+  right: 0;
+  width: 2.8em;
+  height: 2.4em;
+  border-radius: 0 3px 3px 0;
+  background-color: #be03a9; /* select boxの背景色をチャットコンテナの背景色と同系統の色に変更 */
+}
+
+.selectbox-001::after {
+  position: absolute;
+  top: 50%;
+  right: 1.4em;
+  transform: translate(50%, -50%) rotate(45deg);
+  width: 6px;
+  height: 6px;
+  border-bottom: 3px solid #fff;
+  border-right: 3px solid #fff;
+}
+
+.selectbox-001 select {
+  appearance: none;
+  min-width: 230px;
+  height: 2.4em;
+  padding: .4em 3.6em .4em .8em;
+  border: none;
+  border-radius: 3px;
+  background-color: #ffffff; /* select boxの背景色をチャットコンテナの背景色と同系統の色に変更 */
+  color: #333;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.selectbox-001 select:focus {
+  outline: 2px solid #be03a9; /* select boxのアウトライン色をチャットコンテナの背景色と同系統の色に変更 */
+}
+
+.professional-text {
+  font-weight: bold;
+  color: #434242; /* 黒色からやや濃い灰色に変更 */
+  font-size: 17px;
+  text-shadow: 0.5px 0.5px 0.5px #888888; /* シャドウを若干入れる */
+  margin-bottom: 6px; /* マージンを下に追加 */
+}
